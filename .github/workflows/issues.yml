@@ -4,5 +4,5 @@ jobs:
   notify:
     runs-on: ubuntu-latest
     steps:
-      - name: Display issue title
-        run: echo ${{ github.event }}
+      - name: Display event data
+        run: echo ${{ toJSON(github.event) }}
